@@ -1,0 +1,823 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="803.2,424" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="400,164.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="Nike air max" Name="SneakerName" />
+      <Variable x:TypeArguments="x:String" Default="F" Name="Gender" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;44&quot;,&quot;43&quot;}]" Name="Sizes" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;negru&quot;,&quot;alb&quot;}]" Name="Colors" />
+      <Variable x:TypeArguments="x:String" Default="44" Name="Size" />
+      <Variable x:TypeArguments="x:String" Default="Negru" Name="Color" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Flowchart sap:VirtualizedContainerService.HintSize="337.6,52.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+      <Flowchart.Variables>
+        <Variable x:TypeArguments="x:String" Name="SizesString" />
+        <Variable x:TypeArguments="x:String" Name="ColorsString" />
+      </Flowchart.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <av:Point x:Key="ShapeLocation">340,2.3999999999999986</av:Point>
+          <av:Size x:Key="ShapeSize">60,75.2</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">370,77.6 370,123.6</av:PointCollection>
+          <x:Double x:Key="Width">700</x:Double>
+          <x:Double x:Key="Height">953.6</x:Double>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Flowchart.StartNode>
+        <x:Reference>__ReferenceID0</x:Reference>
+      </Flowchart.StartNode>
+      <FlowStep x:Name="__ReferenceID0">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <av:Point x:Key="ShapeLocation">270,123.6</av:Point>
+            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+            <av:PointCollection x:Key="ConnectorLocation">370,176.39999999999998 370,256.4</av:PointCollection>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" Title="{x:Null}" DisplayName="Get Sneaker Name" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Ce adidași doriți să căutați azi?">
+          <ui:InputDialog.Result>
+            <OutArgument x:TypeArguments="x:String">[SneakerName]</OutArgument>
+          </ui:InputDialog.Result>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InputDialog>
+        <FlowStep.Next>
+          <FlowDecision x:Name="__ReferenceID2" Condition="[String.IsNullOrWhiteSpace(SneakerName)]" DisplayName="Sneaker name null or empty" sap:VirtualizedContainerService.HintSize="154.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <av:Point x:Key="ShapeLocation">293.2,256.4</av:Point>
+                <av:Size x:Key="ShapeSize">154.4,87.2</av:Size>
+                <av:PointCollection x:Key="TrueConnector">293.2,300 100,300 100,246.39999999999998</av:PointCollection>
+                <av:PointCollection x:Key="FalseConnector">447.6,300 477.5999999999999,300 477.5999999999999,400 470,400</av:PointCollection>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <FlowDecision.True>
+              <FlowStep x:Name="__ReferenceID3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">0,193.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">100,193.6 100,150 270,150</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Wrong input" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Încercați din nou&quot;]" />
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.True>
+            <FlowDecision.False>
+              <FlowStep x:Name="__ReferenceID1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">270,373.6</av:Point>
+                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">370,426.40000000000003 370,476.4</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Get Gender" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="Introduceți F sau M." Title="Gen">
+                  <ui:InputDialog.Result>
+                    <OutArgument x:TypeArguments="x:String">[Gender]</OutArgument>
+                  </ui:InputDialog.Result>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InputDialog>
+                <FlowStep.Next>
+                  <FlowDecision x:Name="__ReferenceID7" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="78.4,87.2" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                    <FlowDecision.Condition>
+                      <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Gender.Equals(&quot;M&quot;) Or Gender.Equals(&quot;F&quot;)" />
+                    </FlowDecision.Condition>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <av:Point x:Key="ShapeLocation">330.8,476.4</av:Point>
+                        <av:Size x:Key="ShapeSize">78.4,87.2</av:Size>
+                        <av:PointCollection x:Key="TrueConnector">330.8,520 240,520 240,610 270,610</av:PointCollection>
+                        <av:PointCollection x:Key="FalseConnector">409.20000000000005,520 590,520 590,496.40000000000003</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <FlowDecision.True>
+                      <FlowStep x:Name="__ReferenceID4">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">270,583.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">370,636.4 370,673.6</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InputDialog_4" IsPassword="False" Label="Despărțiți prin virgulă pentru mai multe mărimi." Title="Mărime">
+                          <ui:InputDialog.Result>
+                            <OutArgument x:TypeArguments="x:String">[SizesString]</OutArgument>
+                          </ui:InputDialog.Result>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InputDialog>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID6">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">270,673.6</av:Point>
+                                <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">370,726.4 370,783.6</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[String.IsNullOrWhiteSpace(SizesString)]" DisplayName="Parse sizes" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:String[]">[Sizes]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:String[]">[new String(){}]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap:VirtualizedContainerService.HintSize="496,193.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="s:String[]">[Sizes]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="s:String[]">[Split(SizesString,",")]</InArgument>
+                                    </Assign.Value>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID5">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">270,783.6</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Edge: Footshop - Live Street Passion!" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.20000000000005,1712" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                        <Sequence.Variables>
+                                          <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="SneakersDT" />
+                                          <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="SneakerDT1" />
+                                          <Variable x:TypeArguments="x:Int32" Name="idx" />
+                                          <Variable x:TypeArguments="x:String" Default="1" Name="NumberOfPages" />
+                                        </Sequence.Variables>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="436.8,24.8" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                                        <uix:NClick ClickType="Single" DisplayName="Click Searchbar" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/" DesignTimeRectangle="1420, 259, 344, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='search_query' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='search_query' tag='INPUT' type='' class='SuggestionsInput_input_2-pWv' aaname='' /&gt;" Guid="509626a7-f46c-4fb2-92ed-24622dfe112a" ImageBase64="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" InformativeScreenshot="cff0920952550e47e6cd71b8ac9ace7e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Footshop - Live Street Passion!' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into searchbar" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Text="[SneakerName + &quot;[k(enter)]&quot;]" Version="V3">
+                                          <uix:NTypeInto.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/" DesignTimeRectangle="1420, 259, 344, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl name='search_query' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl name='search_query' tag='INPUT' type='' class='SuggestionsInput_input_2-pWv' aaname='' /&gt;" Guid="e2b8bc32-f460-4017-adfa-c39d59342d2c" ImageBase64="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" InformativeScreenshot="cff0920952550e47e6cd71b8ac9ace7e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Footshop - Live Street Passion!' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                          </uix:NTypeInto.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NTypeInto>
+                                        <uix:NClick ClickType="Single" DisplayName="Display all sizes" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="39, 563, 81, 65" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Vezi toate'" FullSelectorArgument="&lt;webctrl aaname='Vezi toate' parentid='nav_size_footwear_eur' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Vezi toate' parentid='nav_size_footwear_eur' tag='SPAN' type='' class='ShowAll_button_1tOXq' check:innerText='Vezi toate' /&gt;" Guid="b70ef217-0749-4652-80da-2bae1effc5d7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAABFCAYAAAA7I6rBAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAATaSURBVHhe7Zfxa9tGFMf3dwqCIRiKIGACdcChzAwiwsKoKZhCHYgLMcNoP4RQMooLUX4JDI/iUJxfGooDy6AYiqGgX4Lhu3d3Oulky46b+RU23gcOrNNJ7/y5u3enHyCsHZHKgEhlQKQyIFIZEKkMiFQGRCoDIpUBkcqASGVApDIgUhkQqQyIVAZEKgMilQGRyoBIZUCkMiBSGRCpDIhUBlKpl889eJ6H3dNxUlPAZUO38Z6GGCVV/55LNNQ7vQb9+n+QzVQrrHaCRVqt+Gp3fUqBPlq+D99v0a/FjK8jRBcRhkvGfB2sI04mdUozZkNJ28XJ56TOJb1fRXib1H1H7IA2mKfzOuLkcurSFPBnEyU1k9e69FfnPys1TQE/nmGSVFn6L0v6Xrb073F33sRu2dR7XgnlWhPRX/fJfWDUrSb3iovp+AM51fYpV5zVMp1g0A1Q2bT3qB/bAcKr2X8QY3jayPdXtfsQm9vfGmejhMp+iMGX5L5DXmq6xOs4cxtP+2jql2VBBoe+fnlpu4kTykHRaROVkgrmo/XetIlv+zo/5crrupnxno/OjWr1gNTxUD/Xfqba0Co6Uu/pY6RdjHH2k5FU2m4gfBuh122YfpC0+u/ZirMDPNdf+k+dT9RgxTj+Xgc9atc7DuArVyVyNZMu81IJO/3rb5yRft/KL/2bDnx93cFoqlsYPnVQVfVbHXxMqnJMB2g9Me/PZvwDUhOKlmV8Hug6b4f6letHiKr6wxsBIi2F4qpJkV4b0udfZFvksjilXyKa7xnxxYHxsp+vn5OaLoO9Xtpw8Cq/9O2oB+/cVyli9PZUp2hG/51UpcTU4bJ+rvz80unE46X2X5i6xf2g9n/Q5TTGZDzGeDLT7pbkq9jOPlEUx9T5aF8nFSlDtH26t9HInVzmpaYpIEBP9yF50Fn6NvCy4nZKkebXrTaG7qx6tNQRwqeqzsl7Djaeuweo41J4eID6tjrC2dxKZalUG2dZyfdhXiphXxyck9V0qWeB7Qw5eEujr2ZAQYmz/Uqnj7J6xwYFV/krx3eQOqW2tST37gRodXuULwcYXbVRUbGXSr1DuKPqKmhfFf/X8XiC2JkohVLTXEPLdH7Egcmb+lydJZ7MBPlK0nQeLVNHZ5epgn/5x++SnPhy5vOC9oCHpWbpz60z3CPWUmP6lVEoFXGEQKWAzQBBTQWxO3XC5xPsqs48aWHgLuWvPfMc5ZhLVa9miB5lGoBf5wfA8G1SDy6SCmLVjeruNzMx/KNh0sAwPDInmCKpbpz0jE5HzdwJ/ro9t4oVxVJppKN983JdCnbzNEdWDvRRJjptYVfn3uwoMzw0G5O3WUf7XB1R8qV/q2bYalKzeA19JDKfkSseqdSGpCX7CI7V0u8h/LlC16odFUdKcRxnk621dH0axzlCWhZIdWYBFf+46ICkDv8t1Ldswp8/dNtRX1RM+lhNKuIhOs+yzSVdiise/uMPIYKK09daA2c3H9HZpmt3914Whz4eqs7h35/52LEslCo8nlSqHRkpjyvdbjcxKTOVBZHKgEhlQKQyIFIZEKkMiFQGRCoDIpUBkcqASGVApDIgUhkQqQyIVAZEKgMilQGRyoBIZUCkMiBSGRCpDIhUBkQqAyKVAZHKgEhlQKQyIFIZEKlrB/gHOkXgJ/B07hEAAAAASUVORK5CYII=" InformativeScreenshot="17e18fa1511cfaaf7b9c232a06a3a306.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Reducere până la 60 % | Footshop' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Display genders" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_37" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/page-2" DesignTimeRectangle="39, 838, 300, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Gen'" FullSelectorArgument="&lt;webctrl aaname='Gen' aria-role='tab' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Gen' aria-role='tab' tag='A' type='' class='' check:innerText='GEN' /&gt;" Guid="28c70a6e-cee8-4292-936d-5d35a53adc48" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAABDCAYAAAAbOlkoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPbSURBVHhe7dy/SxthGMDx/BH5A4SAQ8ZszZRAB6WLBx2EDs0mFIp0kHSSQMkm6SDi0ODUMQ7FDkIGV0kHoYOQSRwM3CBkcBAcnua9ey/3I3fRREv7HN8PPBBf37OdvlzenBYEAJQiYADUImAA1JoGbDQaMQzDqJgAd2AA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANTKCNi9uOd96R11pPm5KZ2jnvTP3clqmnsZ37jizps7u9UT7r9/sEtRd/aa2/R/DQACswFzT6RZK0mxWJyZ8ruODG7tvqnJ/pS90XH2h3avEe53vv62a6HhvuNft3NiVwAgXTxgDwNpr9nwlB3Z2utK77gn3b0tccr+eul9V67tdl8QpIo4H5veHVtyOqeu3WtEgrfakG78hxEwIGcajYZcXV3Zr57OXPeYeMDOdqXixWVzJizyqy3r3vccObi0a54gSMn1LPE7ttKHnoztdwwCBuRHrVaTQqEgKysrduVpgusei1gsYNeHNh4bBxJ90+cLw9P8aZc8zwtYsViV5mmYMAIG5IO562q1Wl6IFolYEC8z5vU8sYBN45EasPDwfRw7X182YI7sthpSMq/X2jKwB/oEDMiPRSO2SLyMuQFzT/1PIZPz/cLf7wuClH0Glr7fBG8oBxvmdXigT8CAfElGLOtt4aLxMuYGbPp1YtLfQmbP3LecwdmaPdAnYED+mIhFA5WM2DLxMuYGbHzZ9z6F9Kctm154soJUl+1vwd74DGIfCCQCJmPpf656P9cc6A8IGJBLWRFbNl7GAmdg4Z3WyxziR/bf9mRr1axVxXlb9/8PBAzInWTEorNovIxYwNyjhh+PNx2ZfcT0LwZsYnjo+Af6wRAwIJfSIrZMvIxYwOSiY5/1qkrzR/Th00ncjrftM2IN6d7YRc/LBCz2EK0ZAgbklomY+UTSxGvRZ8Si4gGTsZzs+OdRxWJJKrW61F9P5lV5ura+N7B7A+GdWdak/ypRSvDOdqUaXEfAgFwL7sSeIxGwiQdX+l8cqXhnUpEp12VrfxB7at73ggEzAf1U8a8jYAAeMRuwwMN9+NckbsYZf4kCAP6d7IABwH+OgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUGsasNFoxDAMo2J8In8AW552W5tJXO0AAAAASUVORK5CYII=" InformativeScreenshot="25878c6504f484937f9c09c6d6b736f0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Footshop' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Display genders" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NClick_39" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/page-2" DesignTimeRectangle="39, 838, 300, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Gen'" FullSelectorArgument="&lt;webctrl aaname='Gen' aria-role='tab' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Gen' aria-role='tab' tag='A' type='' class='' check:innerText='GEN' /&gt;" Guid="28c70a6e-cee8-4292-936d-5d35a53adc48" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATAAAABDCAYAAAAbOlkoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAPbSURBVHhe7dy/SxthGMDx/BH5A4SAQ8ZszZRAB6WLBx2EDs0mFIp0kHSSQMkm6SDi0ODUMQ7FDkIGV0kHoYOQSRwM3CBkcBAcnua9ey/3I3fRREv7HN8PPBBf37OdvlzenBYEAJQiYADUImAA1JoGbDQaMQzDqJgAd2AA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANQiYADUImAA1CJgANTKCNi9uOd96R11pPm5KZ2jnvTP3clqmnsZ37jizps7u9UT7r9/sEtRd/aa2/R/DQACswFzT6RZK0mxWJyZ8ruODG7tvqnJ/pS90XH2h3avEe53vv62a6HhvuNft3NiVwAgXTxgDwNpr9nwlB3Z2utK77gn3b0tccr+eul9V67tdl8QpIo4H5veHVtyOqeu3WtEgrfakG78hxEwIGcajYZcXV3Zr57OXPeYeMDOdqXixWVzJizyqy3r3vccObi0a54gSMn1LPE7ttKHnoztdwwCBuRHrVaTQqEgKysrduVpgusei1gsYNeHNh4bBxJ90+cLw9P8aZc8zwtYsViV5mmYMAIG5IO562q1Wl6IFolYEC8z5vU8sYBN45EasPDwfRw7X182YI7sthpSMq/X2jKwB/oEDMiPRSO2SLyMuQFzT/1PIZPz/cLf7wuClH0Glr7fBG8oBxvmdXigT8CAfElGLOtt4aLxMuYGbPp1YtLfQmbP3LecwdmaPdAnYED+mIhFA5WM2DLxMuYGbHzZ9z6F9Kctm154soJUl+1vwd74DGIfCCQCJmPpf656P9cc6A8IGJBLWRFbNl7GAmdg4Z3WyxziR/bf9mRr1axVxXlb9/8PBAzInWTEorNovIxYwNyjhh+PNx2ZfcT0LwZsYnjo+Af6wRAwIJfSIrZMvIxYwOSiY5/1qkrzR/Th00ncjrftM2IN6d7YRc/LBCz2EK0ZAgbklomY+UTSxGvRZ8Si4gGTsZzs+OdRxWJJKrW61F9P5lV5ura+N7B7A+GdWdak/ypRSvDOdqUaXEfAgFwL7sSeIxGwiQdX+l8cqXhnUpEp12VrfxB7at73ggEzAf1U8a8jYAAeMRuwwMN9+NckbsYZf4kCAP6d7IABwH+OgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUIuAAVCLgAFQi4ABUGsasNFoxDAMo2J8In8AW552W5tJXO0AAAAASUVORK5CYII=" InformativeScreenshot="25878c6504f484937f9c09c6d6b736f0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Footshop' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                          </uix:NClick.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NClick>
+                                        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[Gender]" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="Switch`1_2">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick x:Key="M" ClickType="Single" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="39, 824, 300, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Bărbați (57)'" FullSelectorArgument="&lt;webctrl parentid='filter-sex' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='filter-sex' tag='A' type='' class='FilterCollectionItem_checkbox_1NkuU' aaname=' Bărbați (57)' check:innerText='Bărbați (57)' /&gt;" Guid="d616b0b6-184a-4cb9-9b1d-376cd03b37e4" ImageBase64="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" InformativeScreenshot="7e010c421450a5ce7e38ab896186fc0a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Reducere până la 60 % | Footshop' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                          <uix:NClick x:Key="F" ClickType="Single" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="39, 859, 300, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Femei (65)'" FullSelectorArgument="&lt;webctrl aaname=' Femei (65)' parentid='filter-sex' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' Femei (65)' parentid='filter-sex' tag='A' type='' class='FilterCollectionItem_checkbox_1NkuU' check:innerText='Femei (65)' /&gt;" Guid="772bbc7f-4955-4b61-a35b-eeb852db45cc" ImageBase64="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" InformativeScreenshot="84cbfcb2f968a6d3634dbb60cd230ff3.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Reducere până la 60 % | Footshop' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Switch>
+                                        <uix:NMouseScroll KeyModifiers="{x:Null}" DelayBefore="3" Direction="Up" DisplayName="Scroll to sizes" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                                          <uix:NMouseScroll.SearchedElement>
+                                            <uix:SearchedElement>
+                                              <uix:SearchedElement.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="39, 537, 300, 63" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Mărime'" FullSelectorArgument="&lt;webctrl aria-role='tab' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='tab' tag='A' type='' class='open' aaname='Mărime' check:text='Mărime' /&gt;" Guid="d831a1c4-2108-4154-8a43-95f2d6b34fc4" ImageBase64="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" InformativeScreenshot="e9dfbc3f2bd1981c6e902049743d51de.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                              </uix:SearchedElement.Target>
+                                              <uix:SearchedElement.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:SearchedElement.Timeout>
+                                            </uix:SearchedElement>
+                                          </uix:NMouseScroll.SearchedElement>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NMouseScroll>
+                                        <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="Check sizes" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[Sizes]">
+                                          <ui:ForEach.Body>
+                                            <ActivityAction x:TypeArguments="x:Object">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="x:Object" Name="size_" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,378.4" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[Size]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">[size_.ToString]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                                  <ui:CommentOut.Body>
+                                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,197.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[size_]" />
+                                                    </Sequence>
+                                                  </ui:CommentOut.Body>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ui:CommentOut>
+                                                <uix:NCheckState DisplayName="Check if size exists" sap:VirtualizedContainerService.HintSize="433.6,52.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                                  <uix:NCheckState.IfExists>
+                                                    <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,272.8" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <uix:NClick ClickType="Single" DelayBefore="1" DisplayName="Click size" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                                        <uix:NClick.Target>
+                                                          <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="39, 817, 279, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'44 (26)'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname=' {0} *' parentid='nav_size_footwear_eur' tag='A' /&gt;&quot;, Size)]" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aaname=' {0} *' parentid='nav_size_footwear_eur' tag='A' type='' class='FilterCollectionItem_checkbox_1NkuU' check:text='44 (26)' /&gt;&quot;, size_)]" Guid="d314642d-5670-4ecf-aae8-90f516a9966c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARsAAAAnCAYAAAA/4uxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASESURBVHhe7d3RSyNHAMfx/p2CHBxCEQ76cj70KPpSHyqlPtfC+XKUsse6mGO93MrqFi/HctE0p1FM9UwDIrUXGqIRy3Xh15md2SQmmxioWVj294GBc7LxIA9fZmcn+AWIiCao1WqFg7EhoolibIgoEYwNESWCsSGiRDA2RJQIxoaIEsHYEFEiBmJzfHw88UFE2TMQG9/30Ww2Jzbk7yei7ImNzSQxNkTZxNgQUSIYGyJKBGNDRIlgbAa0UXVNGKaL6q2eegjBJYqvDBivirgM9BxRhqQ2Nr/9OIOpqalwLBf0ZJw/bSxMq+umnhqo6elhgtoOTMOA5V/oGTH3dxXehhXOG3Ks2XD3L9DfjOD6BP5rS10jhplzUKy39avA7aETzufLTT1DlB3pjM3hKmZ1aEbH5gbOt93r7o/NLY42ZShslKIetKtw1+RcDu7uAY72fTiWiom919AXCf3XlTzkwujk0WlLcIYdU8yt++imjCgb0heboIYXT0U4phew8PXo2Nx4S3gkXp+ZX8BX48Tm9gCODIS41Yky0irnVVg69RGaJdjyOquAcz114csVjQn3uLuSae+r9+Z2o98WoLolA2ShEL2RKCNSF5vay7kwMHO/1FD4YURsbt5j+Uvx+uNlFA4NzI0Tm1MvjIP1rluCs7cWrHUH5Z5FDCBWMTI2hiv+JekVS098QlfitupXD96H7jqmE6/eVRFRBqQrNtH+y5NVVAKMjE20p7O4eQP8MV5sGru5MAT5ckvPxAvqBVgyNq/LCK9s6JWOdyJfxedr8aFetfE5biNY7wkZWypTRFmRotj8BXtexmUGK3tqZmhs9lYwI+Myb4t3CWPG5sSTqxUD7ogOBA1xqxXuzZjwTvXjKh2QnLvT2c9Rw0Ter6N7YyV8Kqq9HLvUuVUjyoLUxOZmczEMy6PvtyHWKqHY2AQVrD6R83N48VHPjRkbtZ8yJDZBG/VdR61ojBx2Ttvdp1FVtxMY+90ZWv+Ky/85R+mNGc45lZ7cRLHp2RciyoJ0xOZqG0uPRSymF+Fc6TkhLja1n9Wezuzzip4R/u/Kpl2Hv6FeM98UUb/uuz+KYtO/ZxNtJEe3WxJXNpRRqYhN5Se1/zLznYFtb7szVr9RsXn2XP1c+T06U/MMK1vd67bXltSj8tklWPLnYq2zOuoVu2cjD+PZMjTilqg0eLYmNHS1ojeSe+e5Z0MZlYrYRCuY+8byul7B3DeGrXBinkY1S3Y4l3t/GR+a0AV88X8bhoODnjum4KMKi/n2TM+ID5xPoyijUhGbYUY9jbpjzNuowXM2tzhwZEQsFGrig7rqH90nTm19OtjIuSjuH6lDfS/le22UPqlrRH54zoYyi7G5o/8EcUN9n0lGJHbkUOwJSfO4gHy4wlHD3PBw1OhZD/EEMWUYY9MnOFdnaHq/G/VQou9G3Xk6RZQRqY7NZPBb30STwNgQUSIYGyJKBGNDRImIjU3c33p6qMHYEGXTQGzi/tbTQw8iyp6B2BARTQJjQ0SJYGyIKBGMDRElgrEhokSo2LTwH2q/F7jFlk1aAAAAAElFTkSuQmCC" InformativeScreenshot="1c80bc0521734bfedb18c392fbcdbb38.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                                        </uix:NClick.Target>
+                                                      </uix:NClick>
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfExists>
+                                                  <uix:NCheckState.IfNotExists>
+                                                    <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,200.8" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[&quot;Nu există rezultate pentru mărimea &quot;+Size]" />
+                                                    </Sequence>
+                                                  </uix:NCheckState.IfNotExists>
+                                                  <uix:NCheckState.Target>
+                                                    <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/255-nike-air-force/gen-barbai" DesignTimeRectangle="39, 377, 279, 35" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'44 (18)'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl aaname=' {0} *' parentid='nav_size_footwear_eur' tag='A' /&gt;&quot;, Size)]" FuzzySelectorArgument="&lt;webctrl aaname=' 44 *' parentid='nav_size_footwear_eur' tag='A' type='' class='FilterCollectionItem_checkbox_1NkuU' check:text='44 (18)' /&gt;" Guid="89975b49-8a97-429b-aec3-49fea46d1947" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAARsAAAAnCAYAAAA/4uxDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAP9SURBVHhe7dvRa9NaAMdx/87BEKQgA8EX93BFthf34JC7Z3fBvYhIJIZVoqUja0Aixbo6bDepVTtwqNOCdq5U7g387klysqVt0hXvzYE0vw+ch52kfdjDl5OT0wsgIkpRr9fzB2NDRKlibIhICcaGiJRgbIhICcaGiJRgbIhICcaGiJRgbIhIibHYVKvV1AcR5U9sbNLE2BDlE2NDREowNkSkBGNDREowNmNO0LJ0aLqF1kBO/R/cI9Qea9Ae13DkyjmiHMlsbF7dKWBubs4fa46cjPPFxPJ8cN/cNQ0dOZ3E7TyDrmkwqp/kTMShA0NcK77syokI9wTtagnFRyIo4h5N02E8sdD4fFaWwV7Zv1ba/S5niPIjm7HZ28CCDM3k2PRRvnl23/mxGWB/ywuFifpID9wfH+CYQUjGYzNA2xarIe+a3cBht4dP7SpKfnjEd32Tt7kf8EwXc5tVxKSMaKZlLzZuB/euiXDML2P5j8mx6duruCiuF5aWcXWa2AwaKHurEvGoc5aTbvD4469WgjEWm/BzIxEJVzLG80M546K17X2HASecIsqJzMWm83DRD8zigw6cPyfEpv8Ca5fF9UtrcPY0LE4Tm3f2SBw8Lv7+Kf5Jx2K8tuJj862Goheb7ZackGLme7sl/zvMnZhHMaIZlq3YhPsvVzbQdDExNuGezspWHziYLjbdl0U/BKXdnpwZ0UqIjduC5UUlYWUzdL/cExoLE9GMy1BsvsJc8uJSwPpOMJMYm511FLy4LJniU8KUsWnb3iOOBiupA0mxEbp1079mWHW5Z+PAfCi+z7DRjr7VClc7Zj3yqEY0+zITm/7Wih+Wi7crEGsVX2xs3CY2rnjzi7j3Xs5NGZtgP+X3YoN/uti3Df/66dBLqH08EQ9iEWFshvaFiGZfNmJzXMHqJRGL+RWUj+WcEBebzv1gT2fhblPOCGmvbNxDVIveZ004nZ4fF/fXERpbwRuq8t5JcJ+HKxvKqUzEpvlXsP9SuKWhYldOx8aNIDbX7wZ/N9+GZ2quY3377L7Ko9XgVfnCKgzv71rndHUU9dt7NnJjufjiSE5I4V5ONCzcs6GcykRswhXMeWNtU65gzhtJK5zYt1ERSbGRAdFFQIYOHYermKe7CPPFt1GUV5mITZJJb6OGTPkYFX/OJiJxz6aLenjgz6qh8WYf+3UHpn+oT4f9LkwQz9lQfjE2Q5JPEPvO2yB2Sih6J4S9YImhP7FQP4hsEPMEMeUYYzPClb9/iv1t1H8UnrspNyMbxkQ5kenYpIO/+iZKA2NDREowNkSkBGNDRErExibtQUT5MxYbIqI0MDZEpARjQ0RKMDZEpARjQ0RKMDZEpEQQmx7+BalxKSgEP9LZAAAAAElFTkSuQmCC" InformativeScreenshot="1e9a05897d6e4f49067190a9f4b6dc2f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                                  </uix:NCheckState.Target>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </uix:NCheckState>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ui:ForEach.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:ForEach>
+                                        <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Scroll to page selector" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+                                          <uix:NMouseScroll.SearchedElement>
+                                            <uix:SearchedElement>
+                                              <uix:SearchedElement.Target>
+                                                <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/page-2" DesignTimeRectangle="720, 656, 419, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'PLĂTEȘTI PREA MULT'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='Headline_h1_31HHx' aaname='PLĂTEȘTI PREA MULT' check:innerText='PLĂTEȘTI PREA MULT' /&gt;" Guid="9ec5088c-9ac2-4914-bf59-32ce4bc1144d" ImageBase64="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" InformativeScreenshot="0d87e9a3fe008d7712f4bcceedf22707.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Nike Air Max | Footshop' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                                              </uix:SearchedElement.Target>
+                                              <uix:SearchedElement.Timeout>
+                                                <InArgument x:TypeArguments="x:Double" />
+                                              </uix:SearchedElement.Timeout>
+                                            </uix:SearchedElement>
+                                          </uix:NMouseScroll.SearchedElement>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NMouseScroll>
+                                        <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="436.8,136.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_7" InteractionMode="HardwareEvents" MovementUnits="5" Version="V3" />
+                                        <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[SneakerDT1]" DisplayName="Extract from first page" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Sneaker Name'&gt;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Sneaker URL'&gt;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Sneaker Src'&gt;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Price'&gt;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='alt' name2='Column1' attr2='href' name3='Column2' attr3='src'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                          <uix:NExtractData.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="359, 280, 1471, 4669" DesignTimeScaleFactor="1.25" FriendlyName="'SustenabilNike Air'" FullSelectorArgument="&lt;webctrl id='page-1' tag='DIV' /&gt;" Guid="0cc2eee2-de89-49af-8562-04da1307d392" InformativeScreenshot="8c2c885605d8164702d6560d7dabb4e5.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                                          </uix:NExtractData.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </uix:NExtractData>
+                                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,337.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                                          <TryCatch.Try>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="595.2,2141.6" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <uix:NGetText ContinueOnError="True" DisplayName="Get NumberOfPages" sap:VirtualizedContainerService.HintSize="532.8,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" TextString="[NumberOfPages]" Timeout="2" Version="V3">
+                                                <uix:NGetText.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/gen-barbai/size_footwear_eur-44-43-42.5" DesignTimeRectangle="1070, 712, 50, 50" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'2'" FullSelectorArgument="&lt;webctrl class='PaginationLink_item_nkOWD' parentid='products-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl class='PaginationLink_item_nkOWD' parentid='products-wrapper' tag='A' type='' /&gt;" Guid="85e32f8a-a1bb-41a5-a790-d0957b933ef4" InformativeScreenshot="0ba87cb57f54e94143b125bff5a9e98f.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                                    <uix:TargetAnchorable.Anchors>
+                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                        <uix:Target DesignTimeRectangle="1138, 722, 28, 28" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;svg' parentid='products-wrapper' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='products-wrapper' tag='svg' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACmSURBVFhH7dXBDYAgDIVhRmE0RmETRmEURql5hgNy0bYvMcb+CRc99AuiJnm5AAQgAN8DtNYk5yxjjHnFlwqA4Smlc7EQ6h2otVIRpjPARJgPIQthBiAGwgVAKwJLi3ADkAdBAaBSygXxNApg/T5g9d7nnfvcAM9w5ALsb4F2ODID1mduHY5MANZwpAYwhyMVYP8bMlLvAA4eazgyH0JWAQjA3wEiB2jLSHP41HfzAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                                      </scg:List>
+                                                    </uix:TargetAnchorable.Anchors>
+                                                  </uix:TargetAnchorable>
+                                                </uix:NGetText.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NGetText>
+                                              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="532.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                                                <ui:CommentOut.Body>
+                                                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,197.6" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[NumberOfPages]" />
+                                                  </Sequence>
+                                                </ui:CommentOut.Body>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:CommentOut>
+                                              <uix:NClick ClickType="Single" ContinueOnError="True" DisplayName="Next page" sap:VirtualizedContainerService.HintSize="532.8,157.6" sap2010:WorkflowViewState.IdRef="NClick_42" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Timeout="2" Version="V3">
+                                                <uix:NClick.Target>
+                                                  <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max" DesignTimeRectangle="1137, 516, 32, 32" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl omit:css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;svg' parentid='products-wrapper' tag='svg' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl type='' parentid='products-wrapper' tag='svg' class='' aaname='' /&gt;" Guid="b2ab6e84-4004-42b6-836b-b47af6bdcd62" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACmSURBVFhH7dXBDYAgDIVhRmEURmEUNmEURmGUmmfQeKTtS4yxf8LBeOgXIZjk5QIQgAB8D1BKkdbaevKnAtRaJaV0LhZCBZhzSs6ZilBvARthOoRMhAmAWAgzADEQLgDyItwANMa4AVh43o3yBXA5XcN77+vNXu4z4BmOzADGcGQCsIYjNYA5HKkA7OFIBXj+DRnDkXoLcOmwhiPTIWQWgAD8HSByAK0+U6cl7H7MAAAAAElFTkSuQmCC" InformativeScreenshot="6d1d2dc82b6a4c2909ab7e9c0fff5e26.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                                </uix:NClick.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </uix:NClick>
+                                              <Assign DisplayName="Assign page index" sap:VirtualizedContainerService.HintSize="532.8,81.6" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Int32">[idx]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Int32">2</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[idx &lt;= Integer.Parse(NumberOfPages)]" DisplayName="Iterate through pages" sap:VirtualizedContainerService.HintSize="532.8,1420" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+                                                <ui:InterruptibleWhile.Body>
+                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="497.6,1252.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uix:NMouseScroll KeyModifiers="{x:Null}" CursorMotionType="[CursorMotionType.Smooth]" DelayBefore="2" Direction="Down" DisplayName="Mouse to the page selector" sap:VirtualizedContainerService.HintSize="435.2,238.4" sap2010:WorkflowViewState.IdRef="NMouseScroll_8" InteractionMode="HardwareEvents" MovementUnits="1" Version="V3">
+                                                      <uix:NMouseScroll.SearchedElement>
+                                                        <uix:SearchedElement>
+                                                          <uix:SearchedElement.Target>
+                                                            <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/page-2" DesignTimeRectangle="995, 703, 28, 28" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='*' parentid='products-wrapper' tag='svg' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl type='' parentid='products-wrapper' tag='svg' class='' aaname='' /&gt;" Guid="05c34277-616d-47bb-b534-3cff76363379" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAEMSURBVFhH7ZRNCoMwEEbnKB7Vm3gULyBUqRuFahcq4r+i62lHRKqkmkRLoPjBW2gGvgcZBVScS+ASuAT+Q8A0TdR1HcMwnN7w57AAlQPACEmI5pDAZzlBz6KRFjijnCIlcFY5RViAFu2scoqQwLrcMIzpRD7cAr8op3AJ/Kqcwi2gadosIPO9fwt4/gNVAlVdIy9ZnuPddfFm2yPh88mcEwGGYUARmqZBx3HQsqyRJEmYc7xA3/coSpZlC4k4jplzPEDXdShDmqYLiSiKmHN7QNu2KMtaoigK5twWQHd6hCAIZgnf95kzW0D93sSjkITnecyzPaCqKlQJlGWJKlEvQJurEvUC+fv/ro4cX7KULoYOJK5UAAAAAElFTkSuQmCC" InformativeScreenshot="ce1aeac9de0d4af3dfe387c6d577f01d.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='*' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                                                              <uix:TargetAnchorable.Anchors>
+                                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                                  <uix:Target DesignTimeRectangle="1041, 693, 50, 50" ElementType="Text" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl aaname='1' class='PaginationLink_item_nkOWD' parentid='products-wrapper' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='1' class='PaginationLink_item_nkOWD' parentid='products-wrapper' tag='A' type='' check:text='1' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAA2CAYAAACMRWrdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD1SURBVGhD7dUxa8JQGIXh/GvBREwEg6UIDiIdpBT/gOAitGuh4CYGhdKMLgUNBALx3iSna4dQ6qTncg680/2WZ7oeHJ1gbBOMbYKxTTC2CcY2wdgmGNsEY5vXNA1cTDC2BGNLMLYEY0swtgRjSzC2BGNLMLYEY0swtgRjSzC2vIsxcDGvrmtcU1VZWGtgq/b3e+kqWGVKfL0+YRj6ePnIcbHtd/fQv2C2LJCfv5FulpiNQgTdrhuw03aN5+kj4jjGoB/AdwVWZkekn3skSYK3xQOiniOw3x1WEwz7gt0sd2Ftn9tf7ZZjREEH8/cMRdl+c/sMfgD+UiTLJJO/YAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                                                </scg:List>
+                                                              </uix:TargetAnchorable.Anchors>
+                                                            </uix:TargetAnchorable>
+                                                          </uix:SearchedElement.Target>
+                                                          <uix:SearchedElement.Timeout>
+                                                            <InArgument x:TypeArguments="x:Double" />
+                                                          </uix:SearchedElement.Timeout>
+                                                        </uix:SearchedElement>
+                                                      </uix:NMouseScroll.SearchedElement>
+                                                    </uix:NMouseScroll>
+                                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[SneakersDT]" DisplayName="Extract from current page" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Sneaker Name'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Sneaker URL'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;true&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Price'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column4' Name='Sneaker Src'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column3' attr2='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h4' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='strong' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column4' attr='src'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="435.2,157.6" sap2010:WorkflowViewState.IdRef="NExtractData_8" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                                      <uix:NExtractData.Target>
+                                                        <uix:TargetAnchorable DesignTimeRectangle="359, 139, 1471, 4085" DesignTimeScaleFactor="1.25" FriendlyName="'-45 %Nike'" FullSelectorArgument="&lt;webctrl id='page-*' tag='DIV' /&gt;" Guid="4c62f52f-ec99-4b5b-be95-ca63eaae1636" InformativeScreenshot="d06fd81da5ba39c490d2e7e668b9adca.png" ScopeSelectorArgument="&lt;html app='msedge.exe' omit:title='Nike Air Max | Footshop' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                                      </uix:NExtractData.Target>
+                                                    </uix:NExtractData>
+                                                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,276" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                                                      <ui:CommentOut.Body>
+                                                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,197.6" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="337.6,85.6" sap2010:WorkflowViewState.IdRef="MessageBox_11" Text="[SneakersDT.Rows.Count.ToString]" />
+                                                        </Sequence>
+                                                      </ui:CommentOut.Body>
+                                                    </ui:CommentOut>
+                                                    <ui:MergeDataTable Destination="[SneakerDT1]" DisplayName="Add scraped data" sap:VirtualizedContainerService.HintSize="435.2,134.4" sap2010:WorkflowViewState.IdRef="MergeDataTable_7" MissingSchemaAction="Add" Source="[SneakersDT]" />
+                                                    <Assign sap:VirtualizedContainerService.HintSize="435.2,81.6" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">[idx]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">[idx+1]</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <If Condition="[idx &lt;= Integer.Parse(NumberOfPages)]" DisplayName="Check next page exists" sap:VirtualizedContainerService.HintSize="435.2,52.8" sap2010:WorkflowViewState.IdRef="If_5">
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                      <If.Then>
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="400,269.6" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <uix:NClick ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="337.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_43" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d37a45f0-5e0c-4ba9-ae92-e412afb2cd38" Version="V3">
+                                                            <uix:NClick.Target>
+                                                              <uix:TargetAnchorable BrowserURL="https://www.footshop.ro/ro/62-nike-air-max/reduceri-pana_20/page-2" DesignTimeRectangle="1253, 785, 28, 28" DesignTimeScaleFactor="1.25" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;a&amp;gt;svg' idx='2' parentid='products-wrapper' tag='svg' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl type='' class='' parentid='products-wrapper' tag='svg' aaname='' /&gt;" Guid="4b1b83d8-ce23-4abb-8f16-fc42e1a4d953" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACmSURBVFhH7dXBDYAgDIVhRmEURmEUNmEURmGUmmfQeKTtS4yxf8LBeOgXIZjk5QIQgAB8D1BKkdbaevKnAtRaJaV0LhZCBZhzSs6ZilBvARthOoRMhAmAWAgzADEQLgDyItwANMa4AVh43o3yBXA5XcN77+vNXu4z4BmOzADGcGQCsIYjNYA5HKkA7OFIBXj+DRnDkXoLcOmwhiPTIWQWgAD8HSByAK0+U6cl7H7MAAAAAElFTkSuQmCC" InformativeScreenshot="5773fce1e340f747396c053a76c0748c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Nike Air Max, discount până 20 % | Footshop' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                                                            </uix:NClick.Target>
+                                                          </uix:NClick>
+                                                        </Sequence>
+                                                      </If.Then>
+                                                      <If.Else>
+                                                        <Sequence sap:VirtualizedContainerService.HintSize="400,104.8" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                        </Sequence>
+                                                      </If.Else>
+                                                    </If>
+                                                  </Sequence>
+                                                </ui:InterruptibleWhile.Body>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:InterruptibleWhile>
+                                            </Sequence>
+                                          </TryCatch.Try>
+                                          <TryCatch.Catches>
+                                            <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+                                                </ActivityAction.Argument>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[exception.Message]" />
+                                              </ActivityAction>
+                                            </Catch>
+                                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ActivityAction x:TypeArguments="s:Exception">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                                </ActivityAction.Argument>
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[exception.Message]" />
+                                              </ActivityAction>
+                                            </Catch>
+                                          </TryCatch.Catches>
+                                        </TryCatch>
+                                        <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Write data" sap:VirtualizedContainerService.HintSize="436.8,52.8" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+                                          <ueab:ExcelProcessScopeX.Body>
+                                            <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,193.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="E:\Cursuri\An 3\RPA\SneakersSheet.xls">
+                                                  <ueab:ExcelApplicationCard.Body>
+                                                    <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                                      <ActivityAction.Argument>
+                                                        <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="SneakersSheet" />
+                                                      </ActivityAction.Argument>
+                                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,548.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="433.6,116" sap2010:WorkflowViewState.IdRef="ClearRangeX_2" TargetRange="[SneakersSheet.Sheet(&quot;Sheet1&quot;)]" />
+                                                        <Assign sap:VirtualizedContainerService.HintSize="433.6,80.8" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                          <Assign.To>
+                                                            <OutArgument x:TypeArguments="sd:DataTable">[SneakerDT1]</OutArgument>
+                                                          </Assign.To>
+                                                          <Assign.Value>
+                                                            <InArgument x:TypeArguments="sd:DataTable">[SneakerDT1.DefaultView.ToTable(true,"Sneaker Name","Price","Sneaker URL","Sneaker Src")]</InArgument>
+                                                          </Assign.Value>
+                                                        </Assign>
+                                                        <ueab:WriteRangeX Destination="[SneakersSheet.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[SneakerDT1]" />
+                                                      </Sequence>
+                                                    </ActivityAction>
+                                                  </ueab:ExcelApplicationCard.Body>
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                </ueab:ExcelApplicationCard>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ueab:ExcelProcessScopeX.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ueab:ExcelProcessScopeX>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAB3RJTUUH5AsGEBENIvRhJAAABAJJREFUWEftlUkotm0Ux5+FrAiveZ7HkJAh88I8REkylKxkiCillI2yEZEVSxtlSGRlIxtbFqZEipTMGTKfr9+p++l5fI/37dt83+Jz1b/7vq/rnHP9zzn/67pNoaGh8l/ih8APgR8CNgmEhYVJRETEb4GNpU94eLjO8x4SEqJPvpm3tPuKvxEgcGBgoLi5uYm7u/u3CAoKMpNgE29vb50PDg7WedaJ4ePjYyZmC1YECOTn5yeFhYWysrIiCwsLMj8/L3Nzc1ZYXFyU3Nxc8ff31+BeXl5SU1MjS0tLsre3J8fHx7K9vS2zs7NSXl6u699VwooAwTw9PaWhoUEYHx8f+rQcn5+f+qyqqlKyZN7f369zxhrD8r2trU3j2qqETQJ1dXXqeH9/L319fdLS0iLt7e0aCHR0dEhycrKWNysrS+0YZJyfny85OTlSWloqq6urOn96eirx8fFWbTNgk0B9fb06Ejg2NlacnZ113sPDQ0GvsefZ1dWltmdnZ2Z/Nvr165ekpqbK8/OzrlNVWhEZGal2gPc/EkhLS5OAgACrHpIFzoiMCjEODg60JQiYUwCioqKku7tbBgYGJCMjQzUD8HNxcVGYCGTJypLAw8OD5OXlaSBKGBcXp6Aq2NICxGeM4eFhSUxMVGAHIXt7e3FyclJC+GRnZ2s7h4aGZGRkREwGE0pLZr6+vtLY2KgB39/f5fb2Vq6vr+Xm5kafVIWeJiUlKQFHR0eZnJxUe4T3+Pgod3d3ar+xsSEzMzOyu7urvhcXF/L09CTn5+d6SjY3N8UEC9DU1KSZ2tnZmbPiFLy+vsrLy4vCeOeoUTWy6ezslLGxMbMQGYa9cRIgQFWbm5uloKBANUKl0ZBpa2tLAAEo+fj4uPT09Kgj3/SOykCO/qakpGipDw8PlRBnfm1tTaanp2VwcFBqa2slPT1dEhISZHR0VONAhtNCtdAAOkJTwGSoOiYmRjcmO4M5G7S2turR4mhOTU2ZSzkxMSGZmZlSUlKifhUVFdpKWkiGCJdb8eTkRGMhRrImEUPMwGQwwQkiCKa3t1ed3t7eVANUh77SM9ZwRMkODg4qJsb+/r5uii6oFLEQ6+Xlpa5zl5AsQrQiYLxQ5ujoaD2r1dXV6sTmZImiqRCburq6qqKxReVlZWXmG5M20GNOTlFRkV7NjKurK20dBP94EUHAuIrRAI5ct2xKpbAxgvBNWRExw/L6tRy0CLuv2QMrAgSkh8XFxbK+vq4ZcKbpJWuWtgYgA2mO7vLysuzs7MjR0ZEeM35klZWVuvl3/lYEAAHRA/3Ckcy/2nwFwSFB3/Flzvil/6PfsQFI4PQ7x6+wtDdI8/1d5gZsEvg38UPgh8D/nUCo/AVuZyLIhjys3QAAAABJRU5ErkJggg==" InformativeScreenshot="5d97f1f22ab5621d9ac2854538e9649a.jpg" Selector="&lt;html app='msedge.exe' title='Footshop - Live Street Passion!' /&gt;" Url="https://www.footshop.ro/ro/" />
+                                  </uix:NApplicationCard.TargetApp>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </uix:NApplicationCard>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.True>
+                    <FlowDecision.False>
+                      <FlowStep x:Name="__ReferenceID8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">490,443.6</av:Point>
+                            <av:Size x:Key="ShapeSize">200,52.8</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">590,443.6 590,400 470,400</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Wrong input" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[&quot;Încercați din nou&quot;]" />
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID1</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                    </FlowDecision.False>
+                  </FlowDecision>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowDecision.False>
+          </FlowDecision>
+        </FlowStep.Next>
+      </FlowStep>
+      <x:Reference>__ReferenceID2</x:Reference>
+      <x:Reference>__ReferenceID3</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID5</x:Reference>
+      <x:Reference>__ReferenceID6</x:Reference>
+      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
+    </Flowchart>
+  </Sequence>
+</Activity>
